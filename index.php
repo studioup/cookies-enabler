@@ -40,7 +40,7 @@
         if (isset($_COOKIE['ce-consent']) && $_COOKIE['ce-consent'] == 'Y'){
             return true;
         }
-        echo '<div class="cez-blocked-iframe"></div>';
+        echo '<div class="ce-blocked-iframe"></div>';
         return false;
     }?>
     <?php if(cookie_enabled()) {  ?>
@@ -77,7 +77,7 @@
             element: 'ce-elm', // Default class
             bannerHTML: '<p>This website will use techincal and third party cookies to give you the best possible experience. </p> <a href="#" class="ce-trigger">Enable Cookies</a> or <a class="ce-more" href="http://google.com" target="_self">Learn More</a>', // Enable text trigger 'Enable Cookis'
             duration: '365', // Default duration cookis 365 days
-            eventScroll: true, // Default false
+            eventScroll: false, // Default false
             preventCookies: true,
             gatAnonymized : true,
             whitelistedCookies: ['_cfduid']
