@@ -1,0 +1,123 @@
+html:not([lang="it"]):not([lang="it_IT"]):not([lang="it-IT"]) .cookie-ita {
+    display: none;
+}
+html:not([lang="it"]):not([lang="it_IT"]):not([lang="it-IT"]) .cookie-eng {
+    display: block;
+}
+
+.ce-banner {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    padding: 20px;
+    z-index: 999999;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.ce-banner__inner {
+    width: 100%;
+    margin: 0px auto;
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 18px;
+}
+
+.ce-banner a {
+    text-decoration: none;
+}
+
+.ce-banner a:visited, .ce-banner a:active {
+    color: inherit;
+    outline: none;
+}
+
+.ce-banner__buttons {
+    display: inline-block;
+    width: auto;
+}
+
+.ce-trigger {
+    background: #20d96a;
+}
+
+.ce-more {
+    background: #A7A7A7;
+}
+
+.ce-trigger, .ce-more {
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 100px;
+    border-radius: 3px;
+    text-shadow: none;
+    font-weight: normal;
+    padding: 6px 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+}
+
+.ce-trigger:hover, .ce-more:hover{
+    opacity: 0.8;
+}
+
+.ce-banner__header {
+    font-size: 16px;
+    padding: 0 0 20px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.ce-banner__header:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #ccc;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.ce-blocked-iframe {
+    display: block;
+    width: 180px;
+    height: 180px;
+    background: #A7A7A7;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.ce-blocked-iframe:before {
+    content: 'Blocked content. Enable cookies to see it';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}

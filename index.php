@@ -4,32 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cookies Enabler Demo Page</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
     <style>
         *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-        .ce-banner{
-            position: fixed;
-            bottom: 1em;
-            left: 1em;
-            right: 1em;
-            background-color: #dedede;
-            padding: 1em;
-            color: #232323;
-            font-style: 1em;
-            font-family: arial;
-        }
-        .ce-banner p{
-           margin-bottom: 1em;
-        }
-        .ce-banner .ce-trigger{
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            padding: .6em 1em;
-            display: inline-block;
         }
     </style>
 </head>
@@ -75,7 +55,25 @@
         
         COOKIES_ENABLER.init({
             element: 'ce-elm', // Default class
-            bannerHTML: '<p>This website will use techincal and third party cookies to give you the best possible experience. </p> <a href="#" class="ce-trigger">Enable Cookies</a> or <a class="ce-more" href="http://google.com" target="_self">Learn More</a>', // Enable text trigger 'Enable Cookis'
+            bannerHTML: '<div class="ce-banner__inner">'+
+                            '<h4 id="ce-banner__header">'+
+                                '<div class="cookie-ita">Questo sito internet utilizza cookies</div>'+
+                                '<div class="cookie-eng" style="display:none">This website uses cookies</div>'+
+                            '</h4>'+
+                            '<div class="cookie-ita">Questo sito internet utilizza cookies per migliorare la vostra esperienza d’uso. Utilizzando il nostro sito internet autorizza l’installazione dei cookies in accordo con la nostra Cookie Policy.</div>'+
+                            '<div class="cookie-eng" style="display:none">This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.</div>'+
+                            '<br>'+
+                            '<div class="ce-banner__buttons">'+
+                                '<a href="#" class="ce-trigger">'+
+                                    '<div class="cookie-ita">Accetto</div>'+
+                                    '<div class="cookie-eng" style="display:none">Enable cookies</div>'+
+                                '</a>'+
+                                '<a class="ce-more" href="http://google.com" target="_self">'+
+                                    '<div class="cookie-ita">Maggiori informazioni</div>'+
+                                    '<div class="cookie-eng" style="display:none">Privacy policy</div>'+
+                                '</a>'+
+                            '</div>'+
+                        '</div>',
             duration: '365', // Default duration cookis 365 days
             eventScroll: false, // Default false
             preventCookies: true,
