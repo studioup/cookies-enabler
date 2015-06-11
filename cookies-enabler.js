@@ -27,7 +27,7 @@ window.COOKIES_ENABLER = window.COOKIES_ENABLER || (function () {
             trigger :  document.getElementsByClassName(markupClass.classTrigger),
             more: document.getElementsByClassName(markupClass.classMore),
             banner : document.getElementsByClassName(markupClass.classBanner),
-            iframe : document.getElementsByClassName(markupClass.classIframe),
+            iframe : document.getElementsByClassName(markupClass.classIframe)
         }
 
         if (getCookie() == 'Y') {
