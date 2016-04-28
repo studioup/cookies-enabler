@@ -62,13 +62,11 @@ window.COOKIES_ENABLER = window.COOKIES_ENABLER || (function () {
     var clearAllCookies = function(){
         var cookies = cookieQuery(); 
         for(var cookie in cookies) {
-            console.log(cookie);
 			if(cookie=='ce-consent') { continue; }
 			if(opts.gatAnonymized === true && gatCookies.indexOf(cookie) !== -1 ) { continue; }
 			if(opts.whitelistedCookies.indexOf(cookie) != -1){ continue; }
 			if(!removeCookie(cookie))
 			{
-    			console.log('removing')
 				cookiePossibleHosts=[window.location.host, '.'+window.location.host];
 				//now removing subdomains
 				var regexParse = new RegExp('[a-z\-0-9]{2,63}\.[a-z\.]{2,5}$');
